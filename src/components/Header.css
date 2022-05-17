@@ -1,0 +1,9 @@
+.navbar
+{
+  background-color: aqua!important;
+  color:whitesmoke!important;
+  opacity: 0.8!important;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+}

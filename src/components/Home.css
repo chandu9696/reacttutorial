@@ -1,0 +1,33 @@
+.icon
+{
+    display: flex;
+}
+.item1
+{
+    
+    padding: 10px;
+    cursor: pointer;
+    border-right: solid 1px black;
+    font-size: 14px;
+    
+}
+
+.item2
+{
+      
+    padding: 10px;
+    cursor: pointer;
+    border-right: solid 1px black;
+}
+.item3
+{
+       
+    padding: 10px;
+    cursor: pointer;
+    
+}
+img
+{
+    height: 5vh;
+
+}

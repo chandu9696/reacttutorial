@@ -1,48 +1,65 @@
 
 import './App.css';
-
+import ExpenseItem from './components/ExpenseItem.js'
+import { useState, useEffect } from 'react';
+import Home  from './components/Home';
+import Header from './components/Header';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
+import Add from './components/Add';
+import Update from './components/Update';
+import Delete from './components/Delete';
+import Join from './components/Join';
+import Start from './components/Start';
+import Plan from './components/Plan';
 function App() {
-  return (
-    
-   <div className="navbar navbar-expand-lg navbar-light bg-light">
-  <div className="container-fluid">
-    <a className="navbar-brand" href="#">Navbar</a>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Link</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a className="dropdown-item" href="#">Action</a></li>
-            <li><a className="dropdown-item" href="#">Another action</a></li>
-            <li><hr className="dropdown-divider"/></li>
-            <li><a className="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link disabled">Disabled</a>
-        </li>
-      </ul>
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div>
-  </div>
-</div>
+  
+  // const fetchData = () => {
+  //   fetch("https://reqres.in/api/users?page=2")
+  //     .then(response => {
+  //       return response.json()
+  //     })
+  //     .then(data => {
+  //       console.log(data)
+  //       console.log(data.data[0].email)
+  //     })
+  // }
+  // const [users, setUsers] = useState([])
+  // const fetchData=async()=>
+  // {
+  //   let response= await fetch("https://jsonplaceholder.typicode.com/users");
+  //   let data=await response.json();
+  //   setUsers(data)
+  //   console.log(data)
+  //   console.log(data[0].id)
+  // }
 
-  )
+  // useEffect(() => {
+  //   fetchData()
+  // },[])
+
+  return (
+    <div>
+     
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="expense" element={<ExpenseItem />} />
+      <Route path="add" element={<Add />} />
+      <Route path="update" element={<Update />} />
+      <Route path="delete" element={<Delete />} />
+      <Route path="planameeting" element={<Plan/>} />
+      <Route path="joinameeting" element={<Join />} />
+      <Route path="startameeting" element={<Start />} />
+    </Routes>
     
+    </div>
+    )
+
 }
 
 export default App;
