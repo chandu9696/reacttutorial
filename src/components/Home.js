@@ -7,14 +7,23 @@ import Header from './Header';
 function Home(){
    
     const navigate = useNavigate();
-    
+
+    const [name,Newtitleetname]=useState("");
+
+
+    const getData=(title)=>
+    {
+           Newtitleetname(title);
+    }
+
     return(
+
        <div>
-           <Header></Header>
+           <Header getData={getData}></Header>
         <div className='icon'>
             <div className='item1' onClick={()=>navigate('startameeting')}>
             <img src="https://rc.jiomeet.jio.com/assets/img/start_a_meeting.svg"/>
-            <h5>Start a <br></br>Meeting</h5>
+            <h5>{name}Start a<br></br>Meeting</h5>
             </div>
             
             <div  className='item2' onClick={()=>navigate('joinameeting')}>
@@ -28,6 +37,7 @@ function Home(){
        
             
         </div> 
+       
         </div>)    
 }
 

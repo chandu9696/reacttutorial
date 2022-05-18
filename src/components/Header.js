@@ -5,9 +5,69 @@ import './Header.css'
 
 
 
-function Header(){
+function Header(props){
 
- 
+
+  /*
+  //Sending Data To parent
+    Now Understant what we are doing
+
+    1.This is the Child of header
+    Home(Parent)
+    |
+    |
+    Header(CHild)
+
+    We Want send data to Child to Parent i.e Home to Header
+
+
+    Approch That we are using here is:
+    Send a one function to my Child(Header.js)
+
+    Now My Child Will accepts it in the form of props
+
+    Now Just Pass the required data to that function 
+
+    So Data will get passed to Parent 
+
+    Now parent function will accepts it and do some modification or used to for rendering the data
+
+
+  /*
+    UseState is a Hook
+
+    Usestate is used for Set the state
+
+    Usestate Give two things 1.Varible 2. Function 
+
+    We use Array destructing to Get the both
+
+    We Must Have to do is add a Function to Button or that input filed 
+
+    From Input Use onChage and Set any Varible of that data which can be used to Future
+
+
+    Similary for Button we have OnCLick Funtion
+
+    We can assign on varible to another in Usestate
+
+ */
+  const [title,Newtitleetname]=useState("");
+
+
+
+  
+  function ChangeInputHadle(event)
+  {
+      
+      Newtitleetname(event.target.value);
+  }
+  function HandleChange(event)
+  {
+    event.preventDefault();
+   // console.log(title)
+      props.getData(title)
+  }
     return(
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -29,8 +89,9 @@ function Header(){
              
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={ChangeInputHadle}/>
+              <button class="btn btn-outline-success"  onClick={HandleChange}>Submit</button>
+              
             </form>
           </div>
         </div>
