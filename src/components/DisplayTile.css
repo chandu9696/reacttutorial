@@ -1,0 +1,60 @@
+.main
+{
+    background-color: blue;
+    margin-top: 40px!important;
+    
+    width: 80vw;
+    margin: auto;
+    border: black 2px solid;
+    border-radius: 3px;
+
+}
+
+.item
+{
+    display: flex;
+    margin: 20px;
+    
+    padding: 9px;
+    background-color: black;
+    border: 2px solid#00f3ff;
+    border-radius: 4px;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.date
+{
+    display: flex;
+    width: 15%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    border-radius: 3px;
+}
+.left
+{
+    padding: 5px;
+    display: flex;
+    width: 85%;
+
+    align-items: center;
+
+}
+.left h4
+{
+    color: white;
+    width: 90%;
+    margin-bottom: 0!important;
+}
+.amount
+{
+    width: 10%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    color: wheat;
+    align-items: center;
+    background-color: #00f3ff;
+    border-radius: 3px;
+}

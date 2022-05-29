@@ -7,7 +7,7 @@ function DisplayCards(props) {
     return (
 
         <div className="container-fluid mt-5">
-            <div className="row text-center">
+        <div className="row text-center">
         <div className='col-10 col-md-4'>
             
             <div className="card">

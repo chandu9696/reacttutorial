@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Header from './Header';
 import { Outlet, Link } from "react-router-dom";
 import DisplayCards from './DisplayCards';
+import { useNavigate } from "react-router";
 function ExpenseItem(props) {
  
   
@@ -15,6 +16,7 @@ function ExpenseItem(props) {
     console.log(data)
     console.log(data[0].id)
   }
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchData()
@@ -35,7 +37,9 @@ function ExpenseItem(props) {
                   <div className="card-body ">
                       <h5 className="card-title">{user.name}</h5>
                       <p className="card-text">{user.username}</p>
-                      <a href="/" class="btn btn-primary">Go somewhere</a>
+                      <button className='btn btn-primary' onClick={()=>navigate('/')}>Go somewhere</button>
+
+                      {/* <a href="/" class="btn btn-primary">Go somewhere</a> */}
                   </div>
               </div>
           </div>

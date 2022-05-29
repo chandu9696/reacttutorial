@@ -85,6 +85,22 @@ function Header(props){
                 <a class="nav-link"><Link to="/expense" style={{ textDecoration: 'none',
             color:'wheat'}}>Expense</Link></a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link"><Link to="/displaytile" style={{ textDecoration: 'none',
+            color:'wheat'}}>Display</Link></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><Link to="/increment" style={{ textDecoration: 'none',
+            color:'wheat'}}>Increment</Link></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><Link to="/corosal" style={{ textDecoration: 'none',
+            color:'wheat'}}>Corosal</Link></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link"><Link to="/todolist" style={{ textDecoration: 'none',
+            color:'wheat'}}>To Do List</Link></a>
+              </li>
              
              
             </ul>

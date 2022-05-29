@@ -5,7 +5,6 @@ import Header from './Header';
 function Delete(){
    
     return(
-    
         <div>
              <Header></Header>
             <h1>Delete</h1>

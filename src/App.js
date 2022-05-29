@@ -16,7 +16,20 @@ import Delete from './components/Delete';
 import Join from './components/Join';
 import Start from './components/Start';
 import Plan from './components/Plan';
-function App() {
+import DisplayCards from './components/DisplayCards';
+import DisplayTile from './components/DisplayTile';
+import Increment from './components/Increment';
+import Corosal from './components/Corosal';
+import TodoList from './components/Todo';
+import Increment_state from './components/Hooks/StateandSetState';
+import UseReducer_demo from './components/Hooks/UseReducer_';
+import UseEffect_demo from './components/Hooks/UseEffect_';
+import UseRef_demo from './components/Hooks/UseRef_';
+import UseImpe_demo from './components/Hooks/UseImperativeHandle';
+import UseContext_demo from './components/Hooks/UseContext';
+function App(props) {
+
+
   
   // const fetchData = () => {
   //   fetch("https://reqres.in/api/users?page=2")
@@ -55,6 +68,16 @@ function App() {
       <Route path="planameeting" element={<Plan/>} />
       <Route path="joinameeting" element={<Join />} />
       <Route path="startameeting" element={<Start />} />
+      <Route path="displaytile" element={<DisplayTile />} />
+      <Route path="increment" element={<Increment />} />
+      <Route path="corosal" element={<Corosal />}/>
+      <Route path="todolist" element={<TodoList />} />
+      <Route path='/increment_state' element={<Increment_state/>}/>
+      <Route path='/usereducer' element={<UseReducer_demo/>}/>
+      <Route path='/usereffect' element={<UseEffect_demo/>}/>
+      <Route path='/useref' element={<UseRef_demo/>}/>
+      <Route path='/useimp' element={<UseImpe_demo/>}/>
+      <Route path='/usecontext' element={<UseContext_demo/>}/>
     </Routes>
     
     </div>
